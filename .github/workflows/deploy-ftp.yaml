@@ -1,7 +1,9 @@
 name: FTP Deployment
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
