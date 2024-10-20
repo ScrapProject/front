@@ -32,4 +32,4 @@ jobs:
         SOURCE_DIR="build/"
         DEST_DIR="www/"
         
-        lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; set ftp:ssl-allow no; mirror -e -R $SOURCE_DIR $DEST_DIR --verbose"
+        lftp -c "open -u $FTP_USERNAME,$FTP_PASSWORD $FTP_HOST; set ftp:ssl-force true; set ftp:ssl-protect-data true; mirror -e -R $SOURCE_DIR $DEST_DIR --verbose"
