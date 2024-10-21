@@ -7,6 +7,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     drag and drop le lien dans ta barre de raccoursis, vas sur un site et clique sur le lien<br></br>
+
+    // eslint-disable-next-line jsx-a11y/anchor-is-valid
     <a href="javascript:(function() {
     var modal = document.createElement('div');
     modal.style.position = 'fixed';
