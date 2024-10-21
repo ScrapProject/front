@@ -22,7 +22,7 @@ function GridCardTrack() {
   };
 
   return (
-    <div id="grid-card-track">
+    <div id="grid-card-track">      
       <CardNewTrack onClick={handleCardClick} />
       {tracks.map((track, index) => (
         <CardTrack key={index} title={track.title} />

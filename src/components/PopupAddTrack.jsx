@@ -24,7 +24,6 @@ const PopupAddTrack = ({ isOpen, onClose, onAddTrack }) => {
           onChange={(e) => setTitle(e.target.value)}
           placeholder="Titre du Suivie"
         />
-        <iframe src='https://www.leboncoin.fr/ad/accessoires_animaux/2854884755' />
         <button onClick={handleAddTrack}>Ajouter</button>
         <button onClick={onClose}>Fermer</button>
       </div>
