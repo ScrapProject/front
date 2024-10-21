@@ -36,6 +36,7 @@ root.render(
     iframe.style.width = '600px';
     iframe.style.height = '400px';
     iframe.style.border = 'none';
+    iframe.title = 'prod iframe';
 
     modalContent.appendChild(iframe);
     
