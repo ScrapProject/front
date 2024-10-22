@@ -1,3 +1,6 @@
+
+var selectedText = window.getSelection().toString() || "Aucun texte sélectionné";
+
 var modal = document.createElement('div');
 modal.style.position = 'fixed';
 modal.style.zIndex = '9999';
@@ -17,7 +20,7 @@ modalContent.style.borderRadius = '5px';
 modalContent.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
 
 var modalTitle = document.createElement('h2');
-modalTitle.innerText = 'Bookmarklet';
+modalTitle.innerText = selectedText;
 modalContent.appendChild(modalTitle);
 
 var iframe = document.createElement('iframe');
@@ -33,9 +36,10 @@ var closeButton = document.createElement('button');
 closeButton.innerText = 'Fermer';
 closeButton.style.marginTop = '10px';
 closeButton.onclick = function () {
-  document.body.removeChild(modal);
+    document.body.removeChild(modal);
 };
 
 modalContent.appendChild(closeButton);
 modal.appendChild(modalContent);
 document.body.appendChild(modal);
+
