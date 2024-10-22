@@ -19,12 +19,8 @@ modalContent.style.padding = '20px';
 modalContent.style.borderRadius = '5px';
 modalContent.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
 
-var modalTitle = document.createElement('h2');
-modalTitle.innerText = selectedText;
-modalContent.appendChild(modalTitle);
-
 var iframe = document.createElement('iframe');
-iframe.src = 'https://scrapsys.alwaysdata.net/bookmarklet';
+iframe.src = 'https://scrapsys.alwaysdata.net/bookmarklet?p='+selectedText;
 iframe.style.width = '600px';
 iframe.style.height = '400px';
 iframe.style.border = 'none';

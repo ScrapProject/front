@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
+
 import CardTrack from './CardTrack';
 import CardNewTrack from './CardNewTrack';
 import PopupAddTrack from './PopupAddTrack';
@@ -8,8 +10,11 @@ function GridCardTrack() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [tracks, setTracks] = useState([]);
 
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+  const p = queryParams.get('p');
+
   const handleCardClick = () => {
-    console.log('okok')
     setIsPopupOpen(true);
   };
 
@@ -22,13 +27,18 @@ function GridCardTrack() {
   };
 
   return (
-    <div id="grid-card-track">      
-      <CardNewTrack onClick={handleCardClick} />
-      {tracks.map((track, index) => (
-        <CardTrack key={index} title={track.title} />
-      ))}
-      <PopupAddTrack isOpen={isPopupOpen} onClose={closePopup} onAddTrack={addTrack} />
-    </div>
+    <>    
+
+      Ajouter un suivie : <b>{p}</b>
+
+      <div id="grid-card-track">        
+        <CardNewTrack onClick={handleCardClick} />
+        {tracks.map((track, index) => (
+          <CardTrack key={index} title={track.title} />
+        ))}
+        <PopupAddTrack isOpen={isPopupOpen} onClose={closePopup} onAddTrack={addTrack} />
+      </div>
+    </>
   );
 }
 
