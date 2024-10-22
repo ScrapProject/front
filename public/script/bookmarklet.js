@@ -17,7 +17,7 @@ modalContent.style.borderRadius = '5px';
 modalContent.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
 
 var modalTitle = document.createElement('h2');
-modalTitle.innerText = 'Mon Site';
+modalTitle.innerText = 'Bookmarklet';
 modalContent.appendChild(modalTitle);
 
 var iframe = document.createElement('iframe');
