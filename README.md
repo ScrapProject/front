@@ -1,12 +1,10 @@
 
-### Installer les dépendances node (dans /front)
-
+### Installer les dépendances node
 ```sh
 npm install
 ```
 
-### Lancer le projet (dans /front)
-
+### Lancer le projet
 ```sh
 npm start
 ```
